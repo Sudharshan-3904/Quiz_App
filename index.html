@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="index.css">
+    <title>Quiz App</title>
+    <script defer src="index.js"></script>
+</head>
+
+<body onload="show_current_question()">
+    <h1>Quiz App</h1>
+    <div id="start_screen">
+        Click to start Quiz<br>
+        <button type="button" id = "start_quiz_button" onclick="startQuiz()">Start Quiz</button>
+    </div>
+
+    <div id="mainBox">
+        <div id="timer_container">
+            <span id="timer">00:00</span>
+        </div>
+        <!-- <div id="start_screen">
+            Click to start Quiz<br>
+            <button type="button" onclick="startQuiz()">Start Quiz</button>
+        </div> -->
+        <div id="qa_container">
+            <div class="qa_section">
+                <div>
+                    <p id="current_question_0"></p>
+                </div>
+                <div id="current_answers_0"></div>
+            </div>
+            <hr>
+            <div class="qa_section">
+                <div>
+                    <p id="current_question_1"></p>
+                </div>
+                <div id="current_answers_1"></div>
+            </div>
+            <hr>
+            <div class="qa_section">
+                <div>
+                    <p id="current_question_2"></p>
+                </div>
+                <div id="current_answers_2"></div>
+            </div>
+            <hr>
+            <div class="qa_section">
+                <div>
+                    <p id="current_question_3"></p>
+                </div>
+                <div id="current_answers_3"></div>
+            </div>
+            <hr>
+            <div class="qa_section">
+                <div>
+                    <p id="current_question_4"></p>
+                </div>
+                <div id="current_answers_4"></div>
+            </div>
+        </div>
+        <div>
+            <p id="page_counter"></p>
+        </div>
+        <div id="nav">
+            <button type="button" id="previous_button" onclick="prevQues()">Previous</button>
+            <!-- <input type="button" value="Check" onclick="checkAns()"> -->
+            <button type="button" id="next_button" onclick="nextQues()">Next</button>
+        </div>
+        <br>
+        <div id="end_screen">
+            <div id="user_score"></div>
+            <div id="user_info"></div>
+            <button type="button" id="retake_button" onclick="startQuiz()">Retake Test</button>
+        </div>
+    </div>
+</body>
+
+</html>

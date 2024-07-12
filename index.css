@@ -1,0 +1,114 @@
+body {
+    background-image: url("./images/cosmos-1853491.jpg");
+    background-size: cover;
+    background-position: center;
+    color: beige;
+}
+
+div#start_screen {
+    font-size: 1.8rem;
+    text-align: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+button#start_quiz_button {
+    font-size: 1.3rem;
+    text-align: center;
+    align-items: center;
+    margin: 5px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+div#mainBox {
+    display: none;
+}
+
+span {
+    left: 100px;
+}
+
+div#timer_container {
+    border: 1px solid white;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 3px;
+    line-height: 30px;
+    display: inline;
+    position: absolute;
+    top: 3%;
+    right: 5px;
+}
+
+button {
+    border: 1px solid moccasin;
+    border-radius: 10px;
+    background-color: transparent;
+    color: beige;
+}
+
+div#qa_container {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+div.qa_section {
+    text-align: left;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 2px;
+    /* background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.62); */
+}
+
+select {
+    width: 300px;
+}
+
+#end_screen {
+    font-size: 1.8rem;
+    align-items: center;
+    text-align: center;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+}
+
+#retake_button {
+    font-size: 1.2rem;
+    position: sticky;
+    left: 75%;
+    bottom: 5px;
+    margin: 6px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.62);
+}
