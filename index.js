@@ -154,6 +154,10 @@ function isEqual(a, b) {
     return JSON.stringify(a.sort()) === JSON.stringify(b.sort());
 }
 
+function retakeTest() {
+    window.location.reload();
+}
+
 function startCountdown(duration) {
     let timer = duration,
         minutes,
@@ -196,7 +200,6 @@ function prevQues() {
     page_number--;
     if (page_number < 0) {
         page_number = 0;
-        document.getElementById("user_info").innerHTML = "This is the first Page";
     } else {
         show_current_question();
     }
@@ -204,11 +207,11 @@ function prevQues() {
 
 function nextQues() {
     if (page_number + 1 >= Math.floor(total_question / questions_per_page)) {
+        for (let ans_ind = 0; ans_ind < questions_per_page; ans_ind++) {
+            checkAns(ans_ind);
+        }
         end_screen();
     } else {
-        if (page_number + 2 == Math.floor(total_question / questions_per_page)) {
-            document.getElementById("next_button").innerText = "Submit";
-        }
         for (let ans_ind = 0; ans_ind < questions_per_page; ans_ind++) {
             checkAns(ans_ind);
         }
@@ -236,6 +239,7 @@ function checkAns(inp_ques) {
                 current_choice = option.value;
             }
         }
+        console.log(`ans: ${quiz_questions[current_index]["answer"]} inp: ${current_choice}`);
         if (current_choice === quiz_questions[current_index]["answer"]) {
             user_score++;
         }
@@ -269,6 +273,11 @@ function show_current_question() {
         document.getElementById("previous_button").style.display = "none";
     } else {
         document.getElementById("previous_button").style.display = "inline";
+    }
+    if (page_number + 2 == Math.floor(total_question / questions_per_page)) {
+        document.getElementById("next_button").innerText = "Submit";
+    } else {
+        document.getElementById("next_button").innerText = "Next";
     }
     clear_parent();
     for (var z = 0; z < questions_per_page; z++) {
